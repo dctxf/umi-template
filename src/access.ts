@@ -7,9 +7,10 @@ export default function access(initialState: { currentUser: User.Info | undefine
   return {
     /** 页面访问权限 */
     normalRouteFilter: (route: { path: any }) => {
-      console.log(route);
       return routes.includes(route.path);
     },
+    /** 无权限判断 */
+    noAccess: true,
   };
 }
 

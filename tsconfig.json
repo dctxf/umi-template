@@ -25,6 +25,6 @@
     },
     "allowSyntheticDefaultImports": true
   },
-  "include": ["tests/**/*", "test/**/*", "__test__/**/*", "typings/**/*", "config/**/*", ".eslintrc.js", ".stylelintrc.js", ".prettierrc.js", "jest.config.js", "mock/*", "mock/**/*", "src/**/*", "config/.umirc.ts", "typings.d.ts"],
+  "include": ["tests/**/*", "test/**/*", "__test__/**/*", "typings/**/*", "config/**/*", ".eslintrc.js", ".stylelintrc.js", ".prettierrc.js", "jest.config.js", "mock/*", "mock/**/*", "src/**/*", "config/.umirc.ts", "src/typings.d.ts"],
   "exclude": ["node_modules", "lib", "es", "dist", "typings", "**/__test__", "test", "docs", "tests"]
 }

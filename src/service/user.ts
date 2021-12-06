@@ -1,1 +1,3 @@
-export const queryCurrent = () => Promise.resolve({} as User.Info);
+import { request } from 'umi';
+
+export const queryCurrent = () => request('/api/currentUser');

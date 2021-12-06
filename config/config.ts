@@ -2,14 +2,12 @@ import { defineConfig } from 'umi';
 import { name, version } from '../package.json';
 import routes from './routes';
 
-const { REACT_APP_ENV } = process.env;
-
 export default defineConfig({
-  publicPath: REACT_APP_ENV ? `/${REACT_APP_ENV}/` : `/`,
-  base: REACT_APP_ENV || '/',
   define: {
     APP_NAME: name.toLocaleUpperCase(),
     APP_VERSION: version,
+    API_URL: '',
+    NO_ACCESS_ROUTES: routes.filter((i) => i.access === 'noAccess').map((i) => i.path),
   },
   hash: true,
   history: { type: 'browser' },
@@ -35,9 +33,6 @@ export default defineConfig({
     // '@umijs/plugin-initial-state',
     // '@umijs/plugin-access'
   ],
-  request: {
-    dataField: 'data',
-  },
   // externals: {
   //   react: 'window.React',
   // },
